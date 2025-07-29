@@ -1,9 +1,11 @@
-import { useState } from "react";
 import reactLogo from "./assets/react.svg";
+import { increaseCount } from "./store/reducers/counter";
 import viteLogo from "/vite.svg";
+import { useDispatch, useSelector } from "react-redux";
 
 function App() {
-  const [count, setCount] = useState(0);
+  const { count } = useSelector((state) => state.counter);
+  const dispatch = useDispatch();
 
   return (
     <div className="flex flex-col items-center gap-4">
@@ -16,7 +18,7 @@ function App() {
       <div className="flex flex-col items-center gap-4">
         <button
           className="rounded-lg border-1 bg-amber-300 p-4"
-          onClick={() => setCount((count) => count + 1)}
+          onClick={() => dispatch(increaseCount())}
         >
           count is {count}
         </button>
