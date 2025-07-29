@@ -13,9 +13,9 @@ function App() {
         <img src={reactLogo} className="animate-spin" alt="React logo" />
       </div>
       <h1 className="text-2xl">Vite + React</h1>
-      <div className="flex flex-col gap-4 items-center">
+      <div className="flex flex-col items-center gap-4">
         <button
-          className="p-4 border-1 rounded-lg bg-amber-300"
+          className="rounded-lg border-1 bg-amber-300 p-4"
           onClick={() => setCount((count) => count + 1)}
         >
           count is {count}
